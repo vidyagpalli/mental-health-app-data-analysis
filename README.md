@@ -4,23 +4,24 @@ This project simulates a data engineering pipeline for a mental health app, proc
 Built using Kafka, Airflow, Snowflake, and Spark.
 ## Problem Statement
 Mental health platforms generate high-volume user interaction data, but without structured pipelines:
-
+```bash
 - Data becomes inconsistent
 - Engagement insights are unclear
 - AI features cannot be optimized
-
+```
 This project builds a scalable pipeline to solve these challenges.
 ## Architecture
 Pipeline Flow:
 App Events → Kafka → Airflow → Snowflake → Dashboard
 
 Technologies Used:
+```bash
 Apache Kafka – Real-time data ingestion
 Apache Airflow – Workflow orchestration
 Snowflake – Data storage and analytics
 Apache Spark – Data transformation
 Power BI – Dashboard and reporting
-
+```
 ## Data Model
 The pipeline processes structured datasets representing:
 Users
