@@ -78,7 +78,9 @@ GROUP BY provider_id;
 . Data validation and quality checks
 . Analytics-ready data warehouse
 
-# Project Structure
+## 🗂️ Project Structure
+
+```bash
 mental-health-data-pipeline/
 │
 ├── data/
@@ -100,6 +102,7 @@ mental-health-data-pipeline/
 │   └── screenshots/
 │
 └── README.md
+```
 
 ## How to Run
 1. Generate sample data using Python scripts
@@ -111,5 +114,4 @@ mental-health-data-pipeline/
 
 ## 📌 Note
 This is a simulated project inspired by my experience contributing to data and insights workflows within a mental health application. 
-
 My focus was on data pipeline design, data validation, and analytics use cases, reflecting the responsibilities of working alongside backend, product, and analytics teams rather than building the entire system independently.
