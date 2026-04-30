@@ -1,1 +1,1 @@
-# mental-health-app-data-analysis
+# LePal-GenZ-Mental-Health-Analytics
