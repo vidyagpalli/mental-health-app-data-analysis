@@ -66,17 +66,21 @@ FROM sessions
 GROUP BY provider_id;
 
 ## Key Insights
+```bash
 -> Identified user engagement trends across sessions
 -> Analyzed session duration and activity patterns
 -> Evaluated provider participation and activity levels
 -> Simulated data-driven improvements in user engagement (~15%)
+```
 
 ## Key Features
+```bash
 . End-to-end ETL pipeline design
 . Real-time event data simulation
 . Scalable data modeling for user activity
 . Data validation and quality checks
 . Analytics-ready data warehouse
+```
 
 ## 🗂️ Project Structure
 
