@@ -1,1 +1,1 @@
-# LePal-GenZ-Mental-Health-Analytics
+# Mental Health App Analytics Pipeline (Kafka + Airflow + Snowflake)
