@@ -1,29 +1,39 @@
-# Mental Health App Data Pipeline & Analytics (Kafka + Airflow + Snowflake)
-## Project LePal Overview
-This project simulates a data engineering pipeline for a mental health app, processing user sessions and engagement data to generate actionable insights.
-Built using Kafka, Airflow, Snowflake, and Spark.
-## Problem Statement
-Mental health platforms generate high-volume user interaction data, but without structured pipelines:
-```bash
-- Data becomes inconsistent
-- Engagement insights are unclear
-- AI features cannot be optimized
-```
-This project builds a scalable pipeline to solve these challenges.
-## Architecture
+🧠 Mental Health App Data Pipeline & Analytics
+
+(LePal.ai Inspired Project)
+
+📖 Overview
+
+This project simulates a data engineering pipeline for a mental health application, processing user sessions, therapy interactions, and engagement data to generate actionable insights.
+
+It is inspired by my experience working with data and analytics workflows in mental health platforms, focusing on scalable data pipelines and user engagement analysis.
+
+🎯 Problem Statement
+
+Mental health platforms generate high-volume user interaction data (sessions, AI interactions, feedback). Without structured pipelines:
+
+Data becomes inconsistent and unreliable
+Engagement insights are unclear
+AI-driven features cannot be effectively optimized
+
+This project builds a scalable data pipeline to enable reliable analytics and data-driven decision-making.
+
+🏗️ Architecture
+
 Pipeline Flow:
 App Events → Kafka → Airflow → Snowflake → Dashboard
 
 Technologies Used:
-```bash
+
 Apache Kafka – Real-time data ingestion
 Apache Airflow – Workflow orchestration
 Snowflake – Data storage and analytics
 Apache Spark – Data transformation
 Power BI – Dashboard and reporting
-```
-## Data Model
+🗂️ Data Model
+
 The pipeline processes structured datasets representing:
+
 Users
 Therapy Sessions
 Events (AI interactions, feature usage)
@@ -31,61 +41,46 @@ Providers
 Feedback
 
 Example Table:
-sessions(session_id, user_id, provider_id, session_start, session_end, duration)
 
-## Data Pipeline
+sessions(session_id, user_id, provider_id, session_start, session_end, duration)
+⚙️ Data Pipeline
+
 The pipeline consists of the following steps:
 
-1. Data Generation
-Simulated user, session, and event data using Python
-2. Data Ingestion
-Streaming event data using Kafka
-3. Workflow Orchestration
-Scheduled ETL pipelines using Airflow
-4. Data Transformation
-Data cleaning and transformation using Spark
-5. Data Storage
-Structured data stored in Snowflake
-6. Data Validation
-Implemented checks for missing values and data consistency
+Data Generation – Simulated user, session, and event data using Python
+Data Ingestion – Streaming event data using Kafka
+Workflow Orchestration – Scheduled ETL pipelines using Airflow
+Data Transformation – Data cleaning and transformation using Spark
+Data Storage – Structured data stored in Snowflake
+Data Validation – Checks for missing values and data consistency
+📊 Analytics Layer
 
-## Analytics Layer
+Sample queries used to generate insights:
 
-Sample analytics queries used to generate insights:
-
-### Daily Active Users
+-- Daily Active Users
 SELECT COUNT(DISTINCT user_id) AS dau
 FROM sessions;
 
-### Average Session Duration
+-- Average Session Duration
 SELECT AVG(duration) AS avg_session_duration
 FROM sessions;
 
-### Provider Activity
+-- Provider Activity
 SELECT provider_id, COUNT(*) AS total_sessions
 FROM sessions
 GROUP BY provider_id;
-
-## Key Insights
-```bash
--> Identified user engagement trends across sessions
--> Analyzed session duration and activity patterns
--> Evaluated provider participation and activity levels
--> Simulated data-driven improvements in user engagement (~15%)
-```
-
-## Key Features
-```bash
-. End-to-end ETL pipeline design
-. Real-time event data simulation
-. Scalable data modeling for user activity
-. Data validation and quality checks
-. Analytics-ready data warehouse
-```
-
-## 🗂️ Project Structure
-
-```bash
+📈 Key Insights
+Identified user engagement trends across sessions
+Analyzed session duration and activity patterns
+Evaluated provider participation and activity levels
+Simulated ~15% improvement in engagement using data-driven insights
+🚀 Key Features
+End-to-end ETL pipeline design
+Real-time event data simulation
+Scalable data modeling for user activity
+Data validation and quality checks
+Analytics-ready data warehouse
+🗂️ Project Structure
 mental-health-data-pipeline/
 │
 ├── data/
@@ -107,16 +102,15 @@ mental-health-data-pipeline/
 │   └── screenshots/
 │
 └── README.md
-```
+⚡ How to Run
+Generate sample data using Python scripts
+Start Kafka producer to simulate event streaming
+Trigger Airflow DAG for ETL processing
+Load processed data into Snowflake
+Execute SQL queries for analytics
+Connect Power BI for dashboard visualization
+📌 Note
 
-## How to Run
-1. Generate sample data using Python scripts
-2. Start Kafka producer to simulate event streaming
-3. Trigger Airflow DAG for ETL processing
-4. Load processed data into Snowflake
-5. Execute SQL queries for analytics
-6. Connect Power BI for dashboard visualization
+This is a simulated project inspired by my experience contributing to data and insights workflows within a mental health application.
 
-## 📌 Note
-This is a simulated project inspired by my experience contributing to data and insights workflows within a mental health application. 
 My focus was on data pipeline design, data validation, and analytics use cases, reflecting the responsibilities of working alongside backend, product, and analytics teams rather than building the entire system independently.
