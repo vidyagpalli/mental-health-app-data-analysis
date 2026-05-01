@@ -1,14 +1,14 @@
-🧠 Mental Health App Data Pipeline & Analytics
+# 🧠 Mental Health App Data Pipeline & Analytics
 
 (LePal.ai Inspired Project)
 
-📖 Overview
+## 📖 Overview
 
 This project simulates a data engineering pipeline for a mental health application, processing user sessions, therapy interactions, and engagement data to generate actionable insights.
 
 It is inspired by my experience working with data and analytics workflows in mental health platforms, focusing on scalable data pipelines and user engagement analysis.
 
-🎯 Problem Statement
+## 🎯 Problem Statement
 
 Mental health platforms generate high-volume user interaction data (sessions, AI interactions, feedback). Without structured pipelines:
 
@@ -18,7 +18,7 @@ AI-driven features cannot be effectively optimized
 
 This project builds a scalable data pipeline to enable reliable analytics and data-driven decision-making.
 
-🏗️ Architecture
+## 🏗️ Architecture
 
 Pipeline Flow:
 App Events → Kafka → Airflow → Snowflake → Dashboard
@@ -30,7 +30,8 @@ Apache Airflow – Workflow orchestration
 Snowflake – Data storage and analytics
 Apache Spark – Data transformation
 Power BI – Dashboard and reporting
-🗂️ Data Model
+
+## 🗂️ Data Model
 
 The pipeline processes structured datasets representing:
 
@@ -43,7 +44,8 @@ Feedback
 Example Table:
 
 sessions(session_id, user_id, provider_id, session_start, session_end, duration)
-⚙️ Data Pipeline
+
+## ⚙️ Data Pipeline
 
 The pipeline consists of the following steps:
 
@@ -69,18 +71,19 @@ FROM sessions;
 SELECT provider_id, COUNT(*) AS total_sessions
 FROM sessions
 GROUP BY provider_id;
-📈 Key Insights
+## 📈 Key Insights
 Identified user engagement trends across sessions
 Analyzed session duration and activity patterns
 Evaluated provider participation and activity levels
 Simulated ~15% improvement in engagement using data-driven insights
-🚀 Key Features
+## 🚀 Key Features
 End-to-end ETL pipeline design
 Real-time event data simulation
 Scalable data modeling for user activity
 Data validation and quality checks
 Analytics-ready data warehouse
-🗂️ Project Structure
+## 🗂️ Project Structure
+```bash
 mental-health-data-pipeline/
 │
 ├── data/
@@ -102,14 +105,15 @@ mental-health-data-pipeline/
 │   └── screenshots/
 │
 └── README.md
-⚡ How to Run
+```
+## ⚡ How to Run
 Generate sample data using Python scripts
 Start Kafka producer to simulate event streaming
 Trigger Airflow DAG for ETL processing
 Load processed data into Snowflake
 Execute SQL queries for analytics
 Connect Power BI for dashboard visualization
-📌 Note
+## 📌 Note
 
 This is a simulated project inspired by my experience contributing to data and insights workflows within a mental health application.
 
